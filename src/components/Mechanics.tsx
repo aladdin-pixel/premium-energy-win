@@ -1,8 +1,8 @@
 import { CheckCircle2, XCircle, CreditCard, Users, Radio, ShieldCheck } from "lucide-react";
 
 const steps = [
-  { num: 1, text: "You choose to get a Smart Energy Pay Premium account." },
-  { num: 2, text: "You exchange €1000 to SEP — One time entry." },
+  { num: 1, text: "You choose to get a Smart Energy Pay platinum account." },
+  { num: 2, text: "You swap €1000 to SEP, you get a ticket for every swap!" },
   { num: 3, text: "Winners are selected transparently in a live stream." },
   { num: 4, text: "Regardless of outcome, you retain your premium benefits." },
 ];

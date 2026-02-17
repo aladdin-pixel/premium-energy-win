@@ -1,7 +1,6 @@
-import { TicketCheck, Ban, Eye, FileText, ShieldCheck, Trophy } from "lucide-react";
+import { Ban, Eye, FileText, ShieldCheck, Trophy } from "lucide-react";
 
 const rules = [
-  { icon: TicketCheck, text: "One-time entry" },
   { icon: Ban, text: "No subscription" },
   { icon: Ban, text: "No additional purchases" },
   { icon: Eye, text: "Transparent draw" },
