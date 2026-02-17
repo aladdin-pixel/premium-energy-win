@@ -1,4 +1,4 @@
-import { ArrowDown, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -33,14 +33,6 @@ const Hero = () => {
         <p className="text-sm text-muted-foreground tracking-widest uppercase">
           Easy entry · Clear rules · Closing April 30, 2026
         </p>
-
-        <a
-          href="#footer-cta"
-          className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:brightness-110 animate-pulse-glow"
-        >
-          Secure your spot
-          <ArrowDown size={18} />
-        </a>
 
         {/* Email signup */}
         <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
