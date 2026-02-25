@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react";
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
@@ -24,6 +26,7 @@ const Hero = () => {
               referrerPolicy="strict-origin-when-cross-origin"
               className="absolute top-0 left-0 w-full h-full"
               title="SmartEnergyPay_Promo_FirstDraft" />
+
           </div>
         </div>
 
@@ -31,13 +34,23 @@ const Hero = () => {
           Easy entry · Clear rules · Closing April 30, 2026
         </p>
 
-        {/* Omnisend embed */}
-        <div className="max-w-md mx-auto">
-          <div id="omnisend-embedded-v2-699f72cff447765c8535ff85"></div>
+        {/* Email signup */}
+        <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <div className="relative flex-1">
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="w-full h-12 pl-10 pr-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
+
+          </div>
+          <button className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap">
+            Secure Your Spot
+          </button>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
