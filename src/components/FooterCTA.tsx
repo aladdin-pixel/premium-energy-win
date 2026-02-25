@@ -1,9 +1,4 @@
-import { useState } from "react";
-import { Mail } from "lucide-react";
-
 const FooterCTA = () => {
-  const [email, setEmail] = useState("");
-
   return (
     <section id="footer-cta" className="py-24 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none" />
@@ -17,29 +12,23 @@ const FooterCTA = () => {
           After this date: No new entries. The window closes once — for all.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-          <div className="relative flex-1">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
-            <input
-              type="email"
-              placeholder="Email Address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full h-12 pl-10 pr-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
-
-          </div>
-          <button className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap">
-            Secure Your Spot
-          </button>
+        <div className="max-w-md mx-auto">
+          <div id="omnisend-embedded-v2-699f72cff447765c8535ff85"></div>
         </div>
 
         <div className="pt-12 border-t border-border/30 text-xs text-muted-foreground space-y-1">
           <p>© 2026 Smart Energy Pays. All rights reserved.</p>
-          <p>Terms & Conditions · Privacy Policy · Contact</p>
+          <p>
+            <a href="https://smartenergypays.io/legal-regulatory-information">Imprint</a>
+            {" · "}
+            <a href="https://smartenergypays.io/legal/privacy-policy">Privacy Policy</a>
+            {" · "}
+            <a href="https://smartenergypays.io/legal-regulatory-information">Legal</a>
+          </p>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default FooterCTA;
