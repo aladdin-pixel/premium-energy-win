@@ -12,8 +12,8 @@ const Hero = () => {
           <span className="text-gradient-green">€300K over time.</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Smart Energy Pay gives you immediate premium benefits, and one optional chance to win significant monthly SEP rewards. Up to €300.000.
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">Smart Energy Pay gives you immediate premium benefits, and one optional chance to win significant monthly SEP rewards. Up to €300.000
+
         </p>
 
         {/* Video embed */}
@@ -25,8 +25,8 @@ const Hero = () => {
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               className="absolute top-0 left-0 w-full h-full"
-              title="SmartEnergyPay_Promo_FirstDraft"
-            />
+              title="SmartEnergyPay_Promo_FirstDraft" />
+
           </div>
         </div>
 
@@ -41,16 +41,16 @@ const Hero = () => {
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full h-12 pl-10 pr-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"
-            />
+              className="w-full h-12 pl-10 pr-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
+
           </div>
           <button className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap">
             Secure Your Spot
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;

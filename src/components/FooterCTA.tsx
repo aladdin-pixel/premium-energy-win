@@ -25,8 +25,8 @@ const FooterCTA = () => {
               placeholder="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full h-12 pl-10 pr-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"
-            />
+              className="w-full h-12 pl-10 pr-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
+
           </div>
           <button className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap">
             Secure Your Spot
@@ -34,12 +34,12 @@ const FooterCTA = () => {
         </div>
 
         <div className="pt-12 border-t border-border/30 text-xs text-muted-foreground space-y-1">
-          <p>© 2026 Smart Energy Pay. All rights reserved.</p>
+          <p>© 2026 Smart Energy Pays. All rights reserved.</p>
           <p>Terms & Conditions · Privacy Policy · Contact</p>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default FooterCTA;
