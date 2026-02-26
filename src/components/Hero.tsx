@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Background glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 container mx-auto max-w-4xl text-center space-y-8 px-4 sm:px-6">
+      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground">
           Get premium benefits, and a one-time chance to win{" "}
           <span className="text-gradient-green">€300K over time.</span>
