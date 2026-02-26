@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { Mail } from "lucide-react";
+import { useEmailSubmit } from "@/hooks/useEmailSubmit";
 
 const FooterCTA = () => {
-  const [email, setEmail] = useState("");
+  const { email, setEmail, honeypot, setHoneypot, submitting, handleSubmit } = useEmailSubmit("footer");
 
   return (
     <section id="footer-cta" className="py-24 px-6 relative">
@@ -25,11 +25,25 @@ const FooterCTA = () => {
               placeholder="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
               className="w-full h-12 pl-10 pr-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
-
           </div>
-          <button className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap">
-            Secure Your Spot
+          {/* Honeypot */}
+          <input
+            type="text"
+            name="company"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            className="absolute opacity-0 pointer-events-none h-0 w-0"
+          />
+          <button
+            onClick={handleSubmit}
+            disabled={submitting}
+            className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap disabled:opacity-70"
+          >
+            {submitting ? "Submitting…" : "Secure Your Spot"}
           </button>
         </div>
 
@@ -38,8 +52,8 @@ const FooterCTA = () => {
           <p>Terms & Conditions · Privacy Policy · Contact</p>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default FooterCTA;
