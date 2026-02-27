@@ -7,7 +7,7 @@ import {
 
 const faqs = [
 {
-  question: "Do I need to be a new client?",
+  question: "Do I need to be a new client to participate?",
   answer:
   "No. Existing clients can participate as well. Everybody is welcome."
 },
