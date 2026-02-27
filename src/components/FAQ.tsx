@@ -17,7 +17,7 @@ const faqs = [
   "As many as you want. Each €1,000 swapped into $SEP counts as one entry."
 },
 {
-  question: "Do I need a specific subscription (Platinum / Premium)?",
+  question: "Do I need a specific subscription to access benefits?",
   answer:
   "No. All subscriptions allow you to access the benefits."
 },
