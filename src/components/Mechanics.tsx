@@ -1,36 +1,35 @@
-import { CheckCircle2, XCircle, CreditCard, Users, Radio, ShieldCheck } from "lucide-react";
+import { CheckCircle2, XCircle } from "lucide-react";
 
 const steps = [
-  { num: 1, text: "Open a Smart Energy Pays account" },
-  { num: 2, text: "You swap €1000 to SEP, you get a ticket for every swap!" },
-  { num: 3, text: "Winners are selected transparently in a live stream." },
-  { num: 4, text: "Regardless of outcome, you retain your premium benefits." },
+  { num: 1, text: "Eröffnen Sie ein Smart Energy Pays Konto" },
+  { num: 2, text: "Pro 1.000 € SEP‑Tausch erhalten Sie ein Ticket" },
+  { num: 3, text: "Die Auswahl erfolgt transparent im Livestream" },
+  { num: 4, text: "Unabhängig vom Ergebnis behalten Sie Ihre Premium‑Vorteile" },
 ];
 
 const thisIs = [
-  "Participation based game",
-  "One time decision",
-  "Real underlying value",
-  "Transparent mechanics",
-  "Premium first",
+  "Premium‑Vorteile, die Sie sofort nutzen können",
+  "Ein optionales Teilnahmeprogramm mit klaren Regeln",
+  "Ein zeitlich begrenztes Teilnahmefenster (bis 30. April 2026)",
+  "Transparente Belohnungsstufen (Details in den Teilnahmebedingungen)",
+  "Updates per E‑Mail, damit Sie keine Fristen verpassen",
 ];
 
 const thisIsNot = [
-  "Gambling",
-  "Repeated betting",
-  "Empty ticket",
-  "Hidden rules",
-  "Prize only",
+  "Keine garantierte Auszahlung oder ‚sicheres Einkommen'",
+  "Kein Versprechen, dass Sie €300.000 erhalten",
+  "Kein Spam-Abo – Abmeldung jederzeit",
+  "Kein Ersatz für professionelle Finanzberatung",
 ];
 
 const Mechanics = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-4 sm:px-6">
       <div className="container mx-auto max-w-5xl space-y-20">
         {/* Steps */}
         <div className="space-y-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground">
-            How it works
+            So funktioniert es
           </h2>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -45,37 +44,37 @@ const Mechanics = () => {
           </div>
 
           <p className="text-center text-sm text-muted-foreground italic">
-            (Every €1000 bet = one additional chance to win — Maximum one prize per participant)
+            (Pro 1.000 € SEP‑Tausch = ein zusätzliches Ticket — Maximal ein Preis pro Teilnehmer)
           </p>
         </div>
 
         {/* Comparison */}
         <div className="space-y-8">
           <h3 className="text-2xl font-bold text-center text-foreground">
-            What this is — and isn't
+            Was das ist – und was nicht
           </h3>
 
           <div className="grid sm:grid-cols-2 gap-6">
-            {/* This Is */}
+            {/* Das ist */}
             <div className="glass rounded-xl p-6 space-y-4 border-primary/20">
-              <h4 className="text-primary font-semibold text-lg text-center">This Is</h4>
+              <h4 className="text-primary font-semibold text-lg text-center">Das ist</h4>
               <div className="space-y-3">
                 {thisIs.map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle2 className="text-primary shrink-0" size={18} />
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary shrink-0 mt-0.5" size={18} />
                     <span className="text-foreground text-sm">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* This Is NOT */}
+            {/* Das ist NICHT */}
             <div className="glass rounded-xl p-6 space-y-4 border-destructive/20">
-              <h4 className="text-destructive font-semibold text-lg text-center">This Is NOT</h4>
+              <h4 className="text-destructive font-semibold text-lg text-center">Das ist NICHT</h4>
               <div className="space-y-3">
                 {thisIsNot.map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <XCircle className="text-destructive shrink-0" size={18} />
+                  <div key={item} className="flex items-start gap-3">
+                    <XCircle className="text-destructive shrink-0 mt-0.5" size={18} />
                     <span className="text-foreground text-sm">{item}</span>
                   </div>
                 ))}
