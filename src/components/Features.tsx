@@ -15,7 +15,7 @@ const Features = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
             This starts with real-world benefits
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">Getting a Smart Energy Pays Premium account gives you access to tangible, immediate advantages — independent of the game outcome.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">Getting a Smart Energy Pays Platinum account gives you access to tangible, immediate advantages — independent of the game outcome.
 
           </p>
         </div>

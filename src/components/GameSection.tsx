@@ -25,7 +25,7 @@ const GameSection = () => {
             The participation-based game
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Premium account holders may participate in a one-time, participation-based game with real prizes.
+            Platinum account holders may participate in a one-time, participation-based game with real prizes.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-8">
