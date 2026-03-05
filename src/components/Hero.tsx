@@ -11,7 +11,7 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground">
-          Get platinum benefits, and a one-time chance to win{" "}
+          Get premium benefits, and a one-time chance to win{" "}
           <span className="text-gradient-green">€300K over time.</span>
         </h1>
 
