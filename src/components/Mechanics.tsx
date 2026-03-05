@@ -4,7 +4,7 @@ const steps = [
   { num: 1, text: "Open a Smart Energy Pays account" },
   { num: 2, text: "You swap €1000 to SEP, you get a ticket for every swap!" },
   { num: 3, text: "Winners are selected transparently in a live stream." },
-  { num: 4, text: "Regardless of outcome, you retain your premium benefits." },
+  { num: 4, text: "Regardless of outcome, you retain your platinum benefits." },
 ];
 
 const thisIs = [
@@ -12,7 +12,7 @@ const thisIs = [
   "One time decision",
   "Real underlying value",
   "Transparent mechanics",
-  "Premium first",
+  "Platinum first",
 ];
 
 const thisIsNot = [
