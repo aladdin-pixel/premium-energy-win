@@ -1,7 +1,9 @@
 import { Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useEmailSubmit } from "@/hooks/useEmailSubmit";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const { email, setEmail, honeypot, setHoneypot, submitting, handleSubmit } = useEmailSubmit("hero");
 
   return (
@@ -11,11 +13,12 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground">
-          Get premium benefits, and a one-time chance to win{" "}
-          <span className="text-gradient-green">€300K over time.</span>
+          {t("hero.title")}{" "}
+          <span className="text-gradient-green">{t("hero.titleHighlight")}</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">Smart Energy Pay gives you immediate platinum benefits, and one optional chance to win significant monthly SEP rewards. Up to €300.000
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          {t("hero.subtitle")}
         </p>
 
         {/* Video embed */}
@@ -32,7 +35,7 @@ const Hero = () => {
         </div>
 
         <p className="text-sm text-muted-foreground tracking-widest uppercase">
-          Easy entry · Clear rules · Closing April 30, 2026
+          {t("hero.badge")}
         </p>
 
         {/* Email signup */}
@@ -41,7 +44,7 @@ const Hero = () => {
             <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder={t("hero.emailPlaceholder")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
@@ -62,7 +65,7 @@ const Hero = () => {
             disabled={submitting}
             className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap disabled:opacity-70"
           >
-            {submitting ? "Submitting…" : "Secure Your Spot"}
+            {submitting ? t("hero.submitting") : t("hero.secureSpot")}
           </button>
         </div>
       </div>

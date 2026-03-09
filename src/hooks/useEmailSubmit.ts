@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
 export function useEmailSubmit(source: string) {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [honeypot, setHoneypot] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -12,7 +14,7 @@ export function useEmailSubmit(source: string) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!trimmed || !emailRegex.test(trimmed)) {
-      toast({ title: "Please enter a valid email.", variant: "destructive" });
+      toast({ title: t("toast.invalidEmail"), variant: "destructive" });
       return;
     }
 
@@ -23,22 +25,22 @@ export function useEmailSubmit(source: string) {
       });
 
       if (error) {
-        toast({ title: "Something went wrong. Try again.", variant: "destructive" });
+        toast({ title: t("toast.error"), variant: "destructive" });
         return;
       }
 
       if (data?.success) {
         setEmail("");
-        toast({ title: "Email submitted." });
+        toast({ title: t("toast.success") });
       } else if (data?.error === "invalid_email") {
-        toast({ title: "Please enter a valid email.", variant: "destructive" });
+        toast({ title: t("toast.invalidEmail"), variant: "destructive" });
       } else if (data?.error === "rate_limited") {
-        toast({ title: "Too many attempts. Try again later.", variant: "destructive" });
+        toast({ title: t("toast.rateLimited"), variant: "destructive" });
       } else {
-        toast({ title: "Something went wrong. Try again.", variant: "destructive" });
+        toast({ title: t("toast.error"), variant: "destructive" });
       }
     } catch {
-      toast({ title: "Something went wrong. Try again.", variant: "destructive" });
+      toast({ title: t("toast.error"), variant: "destructive" });
     } finally {
       setSubmitting(false);
     }

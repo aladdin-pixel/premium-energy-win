@@ -1,7 +1,9 @@
 import { Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useEmailSubmit } from "@/hooks/useEmailSubmit";
 
 const FooterCTA = () => {
+  const { t } = useTranslation();
   const { email, setEmail, honeypot, setHoneypot, submitting, handleSubmit } = useEmailSubmit("footer");
 
   return (
@@ -10,11 +12,11 @@ const FooterCTA = () => {
 
       <div className="relative z-10 container mx-auto max-w-2xl text-center space-y-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-          Participation window closes on{" "}
-          <span className="text-gradient-green">April 30, 2026</span>
+          {t("footer.title")}{" "}
+          <span className="text-gradient-green">{t("footer.titleDate")}</span>
         </h2>
         <p className="text-muted-foreground text-lg">
-          After this date: No new entries. The window closes once — for all.
+          {t("footer.subtitle")}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -22,7 +24,7 @@ const FooterCTA = () => {
             <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder={t("footer.emailPlaceholder")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
@@ -43,13 +45,13 @@ const FooterCTA = () => {
             disabled={submitting}
             className="h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:brightness-110 animate-pulse-glow whitespace-nowrap disabled:opacity-70"
           >
-            {submitting ? "Submitting…" : "Secure Your Spot"}
+            {submitting ? t("footer.submitting") : t("footer.secureSpot")}
           </button>
         </div>
 
         <div className="pt-12 border-t border-border/30 text-xs text-muted-foreground space-y-1">
-          <p>© 2026 Smart Energy Pays. All rights reserved.</p>
-          <p>Terms & Conditions · Privacy Policy · Contact</p>
+          <p>{t("footer.copyright")}</p>
+          <p>{t("footer.links")}</p>
         </div>
       </div>
     </section>

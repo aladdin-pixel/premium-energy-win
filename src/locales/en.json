@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "secureSpot": "Secure Your Spot"
+  },
+  "hero": {
+    "title": "Get premium benefits, and a one-time chance to win",
+    "titleHighlight": "€300K over time.",
+    "subtitle": "Smart Energy Pay gives you immediate platinum benefits, and one optional chance to win significant monthly SEP rewards. Up to €300.000",
+    "badge": "Easy entry · Clear rules · Closing April 30, 2026",
+    "emailPlaceholder": "Email Address",
+    "secureSpot": "Secure Your Spot",
+    "submitting": "Submitting…"
+  },
+  "features": {
+    "title": "This starts with real-world benefits",
+    "subtitle": "Getting a Smart Energy Pays Platinum account gives you access to tangible, immediate advantages — independent of the game outcome.",
+    "benefit1": "Access to the Smart Energy Pay ecosystem",
+    "benefit2": "Participation in the future of energy and finance",
+    "benefit3": "Up to 25% discount on new BMW and Mercedes vehicles",
+    "benefit4": "Long-term utility, not short-term speculation"
+  },
+  "game": {
+    "title": "The participation-based game",
+    "subtitle": "Platinum account holders may participate in a one-time, participation-based game with real prizes.",
+    "noSubscription": "No subscription",
+    "noPurchases": "No additional purchases",
+    "transparentDraw": "Transparent draw",
+    "clearRules": "Clear rules",
+    "prizesTitle": "The Prizes",
+    "periodMonth1": "every month for 1 year",
+    "periodMonth2": "every month for 2 years",
+    "periodMonth3": "every month for 3 years",
+    "periodMonth4": "every month for 4 years",
+    "periodMonth5": "every month for 5 years",
+    "total": "Total"
+  },
+  "mechanics": {
+    "title": "How it works",
+    "step1": "Open a Smart Energy Pays account",
+    "step2": "You swap €1000 to SEP, you get a ticket for every swap!",
+    "step3": "Winners are selected transparently in a live stream.",
+    "step4": "Regardless of outcome, you retain your platinum benefits.",
+    "disclaimer": "(Every €1000 bet = one additional chance to win — Maximum one prize per participant)",
+    "comparisonTitle": "What this is — and isn't",
+    "thisIs": "This Is",
+    "thisIsNot": "This Is NOT",
+    "is1": "Participation based game",
+    "is2": "One time decision",
+    "is3": "Real underlying value",
+    "is4": "Transparent mechanics",
+    "is5": "Platinum first",
+    "not1": "Gambling",
+    "not2": "Repeated betting",
+    "not3": "Empty ticket",
+    "not4": "Hidden rules",
+    "not5": "Prize only"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Do I need to be a new client to participate?",
+    "a1": "No. Existing clients can participate as well. Everybody is welcome.",
+    "q2": "How many tickets can I get?",
+    "a2": "As many as you want. Each €1,000 swapped into $SEP counts as one entry.",
+    "q3": "Do I need a specific subscription to access benefits?",
+    "a3": "No. All subscriptions allow you to access the benefits.",
+    "q4": "What can I actually win?",
+    "a4": "Up to €5,000 per month for 5 years.\nPlus ecosystem benefits such as exclusive discounts and access perks."
+  },
+  "footer": {
+    "title": "Participation window closes on",
+    "titleDate": "April 30, 2026",
+    "subtitle": "After this date: No new entries. The window closes once — for all.",
+    "emailPlaceholder": "Email Address",
+    "secureSpot": "Secure Your Spot",
+    "submitting": "Submitting…",
+    "copyright": "© 2026 Smart Energy Pays. All rights reserved.",
+    "links": "Terms & Conditions · Privacy Policy · Contact"
+  },
+  "notFound": {
+    "title": "Oops! Page not found",
+    "home": "Return to Home"
+  },
+  "toast": {
+    "invalidEmail": "Please enter a valid email.",
+    "error": "Something went wrong. Try again.",
+    "success": "Email submitted.",
+    "rateLimited": "Too many attempts. Try again later."
+  },
+  "language": {
+    "en": "English",
+    "de": "Deutsch"
+  }
+}

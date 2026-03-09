@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "secureSpot": "Sichere dir deinen Platz"
+  },
+  "hero": {
+    "title": "Erhalte Premium-Vorteile und eine einmalige Chance zu gewinnen",
+    "titleHighlight": "€300.000 über die Zeit.",
+    "subtitle": "Smart Energy Pay bietet dir sofortige Platinum-Vorteile und eine optionale einmalige Chance auf bedeutende monatliche SEP-Belohnungen. Bis zu €300.000",
+    "badge": "Einfache Teilnahme · Klare Regeln · Ende am 30. April 2026",
+    "emailPlaceholder": "E-Mail-Adresse",
+    "secureSpot": "Sichere dir deinen Platz",
+    "submitting": "Wird gesendet…"
+  },
+  "features": {
+    "title": "Das beginnt mit echten Vorteilen",
+    "subtitle": "Mit einem Smart Energy Pays Platinum-Konto erhältst du Zugang zu konkreten, sofort verfügbaren Vorteilen — unabhängig vom Ausgang des Spiels.",
+    "benefit1": "Zugang zum Smart Energy Pay Ökosystem",
+    "benefit2": "Teilnahme an der Zukunft von Energie und Finanzen",
+    "benefit3": "Bis zu 25 % Rabatt auf neue BMW- und Mercedes-Fahrzeuge",
+    "benefit4": "Langfristiger Nutzen statt kurzfristiger Spekulation"
+  },
+  "game": {
+    "title": "Das teilnahmebasierte Spiel",
+    "subtitle": "Platinum-Kontoinhaber können an einem einmaligen, teilnahmebasierten Spiel mit echten Preisen teilnehmen.",
+    "noSubscription": "Kein Abonnement",
+    "noPurchases": "Keine zusätzlichen Käufe",
+    "transparentDraw": "Transparente Ziehung",
+    "clearRules": "Klare Regeln",
+    "prizesTitle": "Die Preise",
+    "periodMonth1": "jeden Monat für 1 Jahr",
+    "periodMonth2": "jeden Monat für 2 Jahre",
+    "periodMonth3": "jeden Monat für 3 Jahre",
+    "periodMonth4": "jeden Monat für 4 Jahre",
+    "periodMonth5": "jeden Monat für 5 Jahre",
+    "total": "Gesamt"
+  },
+  "mechanics": {
+    "title": "So funktioniert es",
+    "step1": "Eröffne ein Smart Energy Pays Konto",
+    "step2": "Tausche €1000 in SEP — du erhältst ein Ticket für jeden Tausch!",
+    "step3": "Die Gewinner werden transparent in einem Livestream ausgewählt.",
+    "step4": "Unabhängig vom Ergebnis behältst du deine Platinum-Vorteile.",
+    "disclaimer": "(Jeder €1000 Einsatz = eine zusätzliche Gewinnchance — maximal ein Preis pro Teilnehmer)",
+    "comparisonTitle": "Was es ist — und was es nicht ist",
+    "thisIs": "Das ist",
+    "thisIsNot": "Das ist NICHT",
+    "is1": "Teilnahmebasiertes Spiel",
+    "is2": "Einmalige Entscheidung",
+    "is3": "Realer zugrunde liegender Wert",
+    "is4": "Transparente Mechanik",
+    "is5": "Platinum steht an erster Stelle",
+    "not1": "Glücksspiel",
+    "not2": "Wiederholtes Wetten",
+    "not3": "Leeres Ticket",
+    "not4": "Versteckte Regeln",
+    "not5": "Nur der Preis zählt"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Muss ich ein neuer Kunde sein, um teilnehmen zu können?",
+    "a1": "Nein. Auch bestehende Kunden können teilnehmen. Jeder ist willkommen.",
+    "q2": "Wie viele Tickets kann ich bekommen?",
+    "a2": "So viele du möchtest. Jede €1.000, die in $SEP getauscht werden, zählt als eine Teilnahme.",
+    "q3": "Benötige ich ein bestimmtes Abonnement, um die Vorteile zu nutzen?",
+    "a3": "Nein. Alle Abonnements ermöglichen den Zugang zu den Vorteilen.",
+    "q4": "Was kann ich tatsächlich gewinnen?",
+    "a4": "Bis zu €5.000 pro Monat für 5 Jahre.\nZusätzlich Ökosystem-Vorteile wie exklusive Rabatte und Zugangsvorteile."
+  },
+  "footer": {
+    "title": "Teilnahmefenster endet am",
+    "titleDate": "30. April 2026",
+    "subtitle": "Nach diesem Datum: Keine neuen Teilnahmen. Das Fenster schließt sich einmal — für alle.",
+    "emailPlaceholder": "E-Mail-Adresse",
+    "secureSpot": "Sichere dir deinen Platz",
+    "submitting": "Wird gesendet…",
+    "copyright": "© 2026 Smart Energy Pays. Alle Rechte vorbehalten.",
+    "links": "Allgemeine Geschäftsbedingungen · Datenschutz · Kontakt"
+  },
+  "notFound": {
+    "title": "Ups! Seite nicht gefunden",
+    "home": "Zur Startseite"
+  },
+  "toast": {
+    "invalidEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "success": "E-Mail erfolgreich übermittelt.",
+    "rateLimited": "Zu viele Versuche. Bitte versuche es später erneut."
+  },
+  "language": {
+    "en": "Englisch",
+    "de": "Deutsch"
+  }
+}
