@@ -32,6 +32,13 @@ export function useEmailSubmit(source: string) {
       if (data?.success) {
         setEmail("");
         toast({ title: t("toast.success") });
+
+        // Fire-and-forget: notify + save to MongoDB
+        fetch("/api/email-submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: trimmed, source }),
+        }).catch(() => {});
       } else if (data?.error === "invalid_email") {
         toast({ title: t("toast.invalidEmail"), variant: "destructive" });
       } else if (data?.error === "rate_limited") {
