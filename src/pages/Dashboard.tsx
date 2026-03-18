@@ -94,6 +94,10 @@ const Dashboard = () => {
   sort((a, b) => b[1].count - a[1].count).
   slice(0, 6);
 
+  if (!authed) {
+    return <DashboardLogin onSuccess={() => setAuthed(true)} />;
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
