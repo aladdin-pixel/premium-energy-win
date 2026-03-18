@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowLeft, Mail, Globe, Clock, Users, RefreshCw, Search } from "lucide-react";
+import DashboardLogin from "@/components/DashboardLogin";
 import { Link } from "react-router-dom";
 
 interface EmailSubmission {
