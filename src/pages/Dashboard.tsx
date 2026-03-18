@@ -105,7 +105,7 @@ const Dashboard = () => {
               <ArrowLeft className="w-4 h-4 text-foreground" />
             </Link>
             <div>
-              <h1 className="text-lg font-bold text-foreground">Email Signups 1 </h1>
+              <h1 className="text-lg font-bold text-foreground">Email Signups  </h1>
               <p className="text-xs text-muted-foreground">Dashboard</p>
             </div>
           </div>
