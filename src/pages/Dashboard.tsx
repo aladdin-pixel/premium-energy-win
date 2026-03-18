@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowLeft, Mail, Globe, Clock, Users, RefreshCw, Search } from "lucide-react";
+import DashboardLogin from "@/components/DashboardLogin";
 import { Link } from "react-router-dom";
 
 interface EmailSubmission {
@@ -16,6 +17,7 @@ interface EmailSubmission {
 }
 
 const Dashboard = () => {
+  const [authed, setAuthed] = useState(() => sessionStorage.getItem("dashboard_auth") === "1");
   const [submissions, setSubmissions] = useState<EmailSubmission[]>([]);
   const [filtered, setFiltered] = useState<EmailSubmission[]>([]);
   const [loading, setLoading] = useState(true);
@@ -91,6 +93,10 @@ const Dashboard = () => {
   const topCountries = Object.entries(countryStats).
   sort((a, b) => b[1].count - a[1].count).
   slice(0, 6);
+
+  if (!authed) {
+    return <DashboardLogin onSuccess={() => setAuthed(true)} />;
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
