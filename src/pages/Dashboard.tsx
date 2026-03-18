@@ -16,6 +16,7 @@ interface EmailSubmission {
 }
 
 const Dashboard = () => {
+  const [authed, setAuthed] = useState(() => sessionStorage.getItem("dashboard_auth") === "1");
   const [submissions, setSubmissions] = useState<EmailSubmission[]>([]);
   const [filtered, setFiltered] = useState<EmailSubmission[]>([]);
   const [loading, setLoading] = useState(true);
