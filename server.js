@@ -13,6 +13,39 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Trust nginx proxy so req.ip gives real client IP
+app.set("trust proxy", true);
+
+// --- Rate limiting (in-memory) ---
+const RATE_LIMIT_WINDOW_MS = 30 * 60 * 1000; // 15 minutes
+const MAX_PER_IP = 5;        // max 5 submissions per IP per window
+const MAX_PER_EMAIL = 2;     // max 2 submissions per email per window
+
+const ipHits = new Map();    // ip -> { count, resetAt }
+const emailHits = new Map(); // email -> { count, resetAt }
+
+function isRateLimited(map, key, max) {
+  const now = Date.now();
+  const entry = map.get(key);
+
+  if (!entry || now > entry.resetAt) {
+    map.set(key, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  if (entry.count >= max) return true;
+
+  entry.count++;
+  return false;
+}
+
+// Cleanup stale entries every 30 minutes
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, val] of ipHits) if (now > val.resetAt) ipHits.delete(key);
+  for (const [key, val] of emailHits) if (now > val.resetAt) emailHits.delete(key);
+}, 30 * 60 * 1000);
+
 // --- MongoDB (persistent connection) ---
 let db;
 async function getDb() {
@@ -46,8 +79,21 @@ app.post("/api/email-submit", async (req, res) => {
     }
 
     const normalizedEmail = email.trim().toLowerCase();
-    const submittedAt = new Date();
     const ip = req.headers["x-forwarded-for"]?.split(",")[0]?.trim() || req.ip || "unknown";
+
+    // Rate limit by IP
+    if (isRateLimited(ipHits, ip, MAX_PER_IP)) {
+      console.log(`Rate limited IP: ${ip}`);
+      return res.status(429).json({ success: false, error: "rate_limited" });
+    }
+
+    // Rate limit by email
+    if (isRateLimited(emailHits, normalizedEmail, MAX_PER_EMAIL)) {
+      console.log(`Rate limited email: ${normalizedEmail}`);
+      return res.status(429).json({ success: false, error: "rate_limited" });
+    }
+
+    const submittedAt = new Date();
     const userAgent = req.headers["user-agent"] || "unknown";
 
     // Save to MongoDB and send notification in parallel
@@ -64,6 +110,11 @@ app.post("/api/email-submit", async (req, res) => {
               user_agent: userAgent,
               created_at: submittedAt,
             },
+            $set: {
+              last_seen_at: submittedAt,
+              last_ip: ip,
+            },
+            $inc: { submission_count: 1 },
           },
           { upsert: true }
         );
